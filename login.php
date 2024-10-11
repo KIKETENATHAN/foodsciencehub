@@ -61,7 +61,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="index.php" class="bg-white text-green-500 border border-green-500 py-2 px-4 rounded font-bold hover:bg-green-100">
         Homepage</a>
     </p>
-
     </div>
 </body>
 </html>

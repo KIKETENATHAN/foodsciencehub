@@ -129,6 +129,14 @@
                 </ul>
             </div>
 
+            <div class="card bg-green-600 text-black p-4 rounded-lg cursor-pointer hover:bg-[#cfffdc] transition duration-300" onclick="toggleContent('webinars')">
+                <h2 class="text-2xl font-bold text-green-600">Be updated with our latest Trends and Jobs, Webinars in the Market?</h2>
+                <p id="webinars-content" class="hidden">Stay informed on the latest trends, 
+                  job opportunities, and webinars in the food science industry. Explore market updates,
+                 career insights, and expert-led events to boost your knowledge and skills.
+                </p>
+            </div>
+
             <div class="card bg-green-600 text-black p-4 rounded-lg cursor-pointer hover:bg-[#cfffdc] transition duration-300" onclick="toggleContent('careers')">
                 <h2 class="text-2xl font-bold text-green-600">Careers in Food Science</h2>
                 <p id="careers-content" class="hidden">The field of food science offers a wide range of career opportunities, including:</p>
@@ -217,6 +225,15 @@
     toggleButton.addEventListener('click', () => {
         menu.classList.toggle('hidden');
     });
+
+    function toggleContent(contentId) {
+        const content = document.getElementById(contentId);
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+        } else {
+            content.classList.add('hidden');
+        }
+    }
 </script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
