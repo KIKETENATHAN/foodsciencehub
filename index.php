@@ -82,9 +82,15 @@
                 <div id="knowledgeBaseLinks" class="hidden absolute top-16 right-0 bg-green-600 rounded-lg shadow-lg w-64 z-50">
                     <div class="p-4 space-y-2">
                         <a href="#link1" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Fruits and Vegetables</a>
-                        <a href="#link2" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Dairy</a>
-                        <a href="#link3" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Meat</a>
+                        <a href="#link2" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Dairy, Meat Tech</a>
                         <a href="#link4" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Cereals</a>
+                        <a href="#link1" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Food Analysis & Quality</a>
+                        <a href="#link2" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Food Engineering</a>
+                        <a href="#link3" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Sugar and Confectionery</a>
+                        <a href="#link4" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Beverages</a>
+                        <a href="#link1" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Roots and Tubers</a>
+                        <a href="#link3" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Food Microbiology</a>
+                        <a href="#link4" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Quality Management System</a>
                     </div>
                 </div>
             </div>
@@ -273,6 +279,16 @@
                 });
             });
         });
+    document.addEventListener("DOMContentLoaded", function () {
+        const knowledgeBaseButton = document.getElementById("knowledgeBaseButton");
+        const knowledgeBaseLinks = document.getElementById("knowledgeBaseLinks");
+
+        knowledgeBaseButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            knowledgeBaseLinks.classList.toggle("hidden"); // Toggle the hidden class
+        });
+    });
+
     </script>
 <script>
  document.getElementById('searchButton').addEventListener('click', function () {
