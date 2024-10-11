@@ -171,13 +171,13 @@
                                 <img src="images/1.png" class="d-block w-full h-full object-cover rounded-lg" alt="Slide 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="images/2.png" class="d-block w-full h-full object-cover rounded-lg" alt="Slide 2">
+                                <img src="images/2.webp" class="d-block w-full h-full object-cover rounded-lg" alt="Slide 2">
                             </div>
                             <div class="carousel-item">
                                 <img src="images/3.png" class="d-block w-full h-full object-cover rounded-lg" alt="Slide 3">
                             </div>
                             <div class="carousel-item">
-                                <img src="images/4.png" class="d-block w-full h-full object-cover rounded-lg" alt="Slide 4">
+                                <img src="images/4.webp" class="d-block w-full h-full object-cover rounded-lg" alt="Slide 4">
                             </div>
                             <div class="carousel-item">
                                 <img src="images/5.png" class="d-block w-full h-full object-cover rounded-lg" alt="Slide 5">
