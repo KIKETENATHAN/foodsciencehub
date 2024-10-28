@@ -101,26 +101,22 @@ session_start();
         </main>
     </div>
 
-    <!-- Footer Navigation for Mobile View -->
-    <div class="fixed bottom-0 left-0 right-0 bg-green-800 text-white flex justify-around py-2">
+   <!-- Footer Navigation for Mobile View -->
+   <div class="fixed bottom-0 left-0 right-0 bg-green-800 text-white flex justify-around py-2">
         <a href="#" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-            <span class="text-lg">🏠</span>
+            <span class="text-lg"><i class="fas fa-home"></i></span>
             <span class="text-sm">Home</span>
         </a>
         <a href="#" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-            <span class="text-lg">📚</span>
+            <span class="text-lg"><i class="fas fa-book"></i></span>
             <span class="text-sm">Discover</span>
         </a>
-        <a href="#" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-            <span class="text-lg">🔥</span>
-            <span class="text-sm">Bytes</span>
-        </a>
         <a href="profile.php" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-            <span class="text-lg">👤</span>
+            <span class="text-lg"><i class="fas fa-user"></i></span>
             <span class="text-sm">Profile</span>
         </a>
         <a href="logout.php" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-        <span class="text-lg"><i class="fas fa-sign-out-alt"></i></span>
+            <span class="text-lg"><i class="fas fa-sign-out-alt"></i></span>
             <span class="text-sm">Log out</span>
         </a>
     </div>
