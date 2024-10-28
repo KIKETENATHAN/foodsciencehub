@@ -18,6 +18,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
     /* Target all anchor tags inside the nav */
     nav a {
@@ -119,7 +120,7 @@ session_start();
             <span class="text-sm">Profile</span>
         </a>
         <a href="logout.php" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-            <span class="text-lg">👤</span>
+        <span class="text-lg"><i class="fas fa-sign-out-alt"></i></span>
             <span class="text-sm">Log out</span>
         </a>
     </div>
