@@ -1,12 +1,8 @@
 <!-- dashboard.php -->
 <?php
-// Check if user is logged in, redirect if not
 session_start();
-//if (!isset($_SESSION['logged_in'])) {
-   // header('Location: login.php');
-   // exit;
-//}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +55,7 @@ session_start();
 
     <!-- Sidebar -->
     <div class="flex flex-col md:flex-row">
-        <aside id="sidebar" class="w-64 bg-green-800 min-h-screen text-white p-6 relative">
+    <aside id="sidebar" class="w-64 bg-green-800 h-screen text-white p-6 fixed top-0 left-0">
             <div class="mb-8">
                 <h1 class="text-2xl font-bold">Foodsciencehub</h1>
             </div>
@@ -74,6 +70,7 @@ session_start();
                 <a href="profile.php">Profile</a>
                 <a href="#">Notifications</a>
                 <a href="#">Chats</a>
+                <hr>
                 <hr>
                 <a href="#">Events & Noticeboards</a>
                 <a href="#">My Calendar</a>
