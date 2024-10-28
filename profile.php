@@ -75,9 +75,9 @@ if (!$user) {
         <!-- Sidebar -->
         <aside class="w-64 bg-green-800 min-h-screen text-white p-6">
             <div class="mb-8">
-                <h1 class="text-2xl font-bold">FoodscienceHub</h1>
             </div>
-            <nav class="space-y-4">
+            <nav class="space-y-4 fixed top-0 left-10">
+            <h1 class="text-2xl font-bold">FoodscienceHub</h1>
                 <a href="dashboard.php" class="block py-2 px-4 rounded-lg hover:bg-green-600">Dashboard</a>
                 <a href="profile.php" class="block py-2 px-4 rounded-lg hover:bg-green-600 bg-green-600">Profile</a>
                 <a href="logout.php" class="block py-2 px-4 rounded-lg hover:bg-green-600">Logout</a>

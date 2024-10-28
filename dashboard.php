@@ -83,7 +83,36 @@ session_start();
         </aside>
 
         <!-- Main Content -->
-        <main id="mainContent" class="flex-1 p-4 md:p-8 transition-all duration-300">
+        <main class="flex-1 p-8 ml-64">
+        <main id="mainContent" class="flex-1 p-8 ml-64 md:p-8 transition-all duration-300">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-3xl font-semibold">Global Community</h2>
+                <button class="py-2 px-4 border-2 border-green-500 text-green-500 rounded-lg">+ Create Post</button>
+            </div>
+
+            <div class="flex space-x-4 mb-6">
+                <button class="bg-green-600 text-white py-2 px-4 rounded-lg">Noticeboard</button>
+                <button class="bg-white text-green-600 border-2 border-green-600 py-2 px-4 rounded-lg">Events</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-bold mb-4">Community Events & Notices</h3>
+                <p class="text-gray-500">Noticeboard is empty.</p>
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-xl font-bold mb-4">Suggested For You</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Suggested Users -->
+                    <div class="bg-white p-4 rounded-lg shadow text-center">
+                        <div class="w-16 h-16 mx-auto bg-gray-200 rounded-full mb-4"></div>
+                        <h4 class="font-semibold">User Name</h4>
+                        <p class="text-gray-500">User Role/University</p>
+                        <button class="mt-4 bg-green-500 text-white py-1 px-3 rounded-lg">Follow +</button>
+                    </div>
+                </div>
+            </div>
+      
+    
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-3xl font-semibold">Global Community</h2>
                 <button class="py-2 px-4 border-2 border-green-500 text-green-500 rounded-lg">+ Create Post</button>
