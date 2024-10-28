@@ -18,6 +18,30 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    /* Target all anchor tags inside the nav */
+    nav a {
+        display: block;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        color: #2f855a; /* green-800 */
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 1rem;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    /* Hover effect */
+    nav a:hover {
+        background-color: green; /* yellow-600 */
+        color: white; /* yellow-700 */
+        font-weight: bold;
+        transform: scale(1.2); /* 1.5x size increase */
+    }
+</style>
+
+
 </head>
 <body class="bg-gray-100">
 
@@ -28,19 +52,16 @@ session_start();
                 <h1 class="text-2xl font-bold">Foodsciencehub</h1>
             </div>
             <nav class="space-y-4">
-                <a href="#" class="block py-2 px-4 rounded-lg bg-white text-green-800 no-underline hover:bg-yellow-600 hover:text-yellow-400">Home</a>
-                <a href="profile.php" class="block py-2 px-4 rounded-lg bg-white text-green-800 no-underline hover:bg-green-600 hover:text-yellow-400">Profile</a>
-                <a href="#" class="block py-2 px-4 rounded-lg bg-white text-green-800 no-underline hover:bg-green-600 hover:text-yellow-400">Notifications</a>
-                <a href="#" class="block py-2 px-4 rounded-lg bg-white text-green-800 no-underline hover:bg-green-600 hover:text-yellow-400">Chats</a>
-                <hr class="border-white my-4">
-                <a href="#" class="block py-2 px-4 rounded-lg bg-white text-green-800 no-underline hover:bg-green-600 hover:text-yellow-400">Events & Noticeboards</a>
-                <a href="#" class="block py-2 px-4 rounded-lg bg-white text-green-800 no-underline hover:bg-green-600 hover:text-yellow-400">My Calendar</a>
-                <a href="#" class="block py-2 px-4 rounded-lg bg-white text-green-800 no-underline hover:bg-green-600 hover:text-yellow-400">Clubs & Communities</a>
-                <hr class="border-green-600 my-4">
-                <a href="#" class="block py-2 px-4 rounded-lg bg-white text-green-800 no-underline hover:bg-green-600 hover:text-yellow-400">Roadmap</a>
+                <a href="#">Home</a>
+                <a href="profile.php">Profile</a>
+                <a href="#">Notifications</a>
+                <a href="#">Chats</a>
+                <hr>
+                <a href="#">Events & Noticeboards</a>
+                <a href="#">My Calendar</a>
+                <a href="#">Clubs & Communities</a>
+                <a href="#">Roadmap</a>
             </nav>
-
-
             <div class="mt-auto pt-6">
                 <p class="text-sm text-center">Made with ❤️ by Celertech Labs &copy;2024</p>
             </div>
@@ -96,6 +117,10 @@ session_start();
         <a href="profile.php" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
             <span class="text-lg">👤</span>
             <span class="text-sm">Profile</span>
+        </a>
+        <a href="logout.php" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
+            <span class="text-lg">👤</span>
+            <span class="text-sm">Log out</span>
         </a>
     </div>
 </body>
