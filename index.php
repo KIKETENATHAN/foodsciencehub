@@ -73,11 +73,11 @@
         </button>
         <!-- Navigation Links -->
         <div id="navbar-menu" class="hidden lg:flex lg:space-x-4">
-            <a href="#" class="bg-[#253d2c] text-white py-2 px-4 rounded-lg hover:bg-green-500 hover:text-white">Home</a>
-            <a href="#" class="bg-[#253d2c] text-white py-2 px-4 rounded-lg hover:bg-green-500 hover:text-white">Blog</a>
-            <div class="relative">
-                <!-- Knowledge Base Button -->
-                <a href="#" id="knowledgeBaseButton" class="bg-[#253d2c] text-white py-2 px-4 rounded-lg hover:bg-green-500 hover:text-white">Knowledge Base</a>
+    <a href="#" class="bg-white text-green-700 py-2 px-4 rounded-lg no-underline hover:bg-green-500 hover:text-white">Home</a>
+    <a href="#" class="bg-white text-green-700 py-2 px-4 rounded-lg no-underline hover:bg-green-700 hover:text-white">Blog</a>
+    <div class="relative">
+        <!-- Knowledge Base Button -->
+        <a href="#" id="knowledgeBaseButton" class="bg-white text-green-700 py-2 px-4 rounded-lg no-underline hover:bg-green-500 hover:text-white">Knowledge Base</a>
                 <!-- Floating Card for Knowledge Base Links -->
                 <div id="knowledgeBaseLinks" class="hidden absolute top-16 right-0 bg-green-600 rounded-lg shadow-lg w-64 z-50">
                     <div class="p-4 space-y-2">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="bg-[#253d2c] text-white py-2 px-4 rounded-lg hover:bg-green-500 hover:text-white">Jobs</a>
+            <a href="#" class="bg-white text-green-700 py-2 px-4 rounded-lg no-underline hover:bg-green-200 hover:text-white">Jobs</a>
             <input type="text" id="searchInput" placeholder="Search..."
                 class="px-2 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-green-300" aria-label="Search">
             <button id="searchButton" class="ml-2 p-2 bg-green-600 text-white rounded-md hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-300 flex items-center justify-center" aria-label="Search Button">
