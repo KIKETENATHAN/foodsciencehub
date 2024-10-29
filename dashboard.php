@@ -66,17 +66,45 @@ session_start();
             </button>
 
             <nav class="space-y-4">
-                <a href="#">Home</a>
-                <a href="profile.php">Profile</a>
-                <a href="#">Notifications</a>
-                <a href="#">Chats</a>
-                <hr>
-                <hr>
-                <a href="#">Events & Noticeboards</a>
-                <a href="#">My Calendar</a>
-                <a href="#">Clubs & Communities</a>
-                <a href="#">Roadmap</a>
-            </nav>
+                    <a href="#" class="flex items-center space-x-2">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="profile.php" class="flex items-center space-x-2">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                    <!--notifications start-->
+                    <div id="notification-container" class="relative">
+                    <a href="#" id="notification-bell" class="flex items-center space-x-2">
+                    <i class="fas fa-bell"></i>
+                    <span class="text-green-500">Notifications</span>
+                    <span id="notification-count" class="absolute top-0 right-0 mt-1 -mr-3 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                    </a>
+                    <div id="notification-popup" class="hidden absolute top-10 right-0 bg-white shadow-lg rounded-lg w-64 p-4">
+                        <div id="notifications-list"></div>
+                    </div>
+                    <!--notifications end -->
+                    <br>
+                    <a href="#" class="flex items-center space-x-2">
+                        <i class="fas fa-comments"></i>
+                        <span>Chats</span>
+                    </a>
+                    <hr>
+                    <a href="#" class="flex items-center space-x-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events & Noticeboards</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2">
+                        <i class="fas fa-calendar"></i>
+                        <span>My Calendar</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2">
+                        <i class="fas fa-users"></i>
+                        <span>Communities</span>
+                    </a>
+                </nav>
+
             <div class="mt-auto pt-6">
                 <p class="text-sm text-center">Made with ❤️ by Celertech Labs &copy;2024</p>
             </div>
@@ -177,5 +205,36 @@ session_start();
             toggleIcon.classList.replace('fa-arrow-right', 'fa-arrow-left');
         }
     }
+</script>
+<script>
+// Function to fetch notifications
+async function fetchNotifications() {
+    const response = await fetch('fetch_notifications.php');
+    const notifications = await response.json();
+
+    const unreadCount = notifications.filter(n => n.is_read == 0).length;
+    document.getElementById('notification-count').innerText = unreadCount;
+
+    const notificationsList = document.getElementById('notifications-list');
+    notificationsList.innerHTML = '';
+
+    notifications.forEach(notification => {
+        const card = document.createElement('div');
+        card.className = 'bg-gray-700 p-2 rounded mb-2';
+        card.innerHTML = `<p>${notification.message}</p><small>${new Date(notification.created_at).toLocaleString()}</small>`;
+        notificationsList.appendChild(card);
+    });
+}
+
+// Show/hide the notification popup
+document.getElementById('notification-bell').addEventListener('click', (event) => {
+    event.preventDefault();
+    const popup = document.getElementById('notification-popup');
+    popup.classList.toggle('hidden');
+    fetchNotifications();
+});
+
+// Initial fetch on page load
+fetchNotifications();
 </script>
 </html>

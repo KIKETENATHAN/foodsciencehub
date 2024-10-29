@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php
 // view_kb_entry.php
-require_once 'db_connection.php';
+require_once '/db_connection.php';
 
 if (!isset($_GET['id'])) {
     header("Location: knowledge_base.php");
