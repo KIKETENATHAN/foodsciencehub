@@ -1,30 +1,77 @@
-<div class="notification-form">
-    <h2>Send Notification</h2>
-    <form id="send-notification-form">
-        <textarea id="notification-message" rows="4" placeholder="Enter your notification message here..." required></textarea>
-        <button type="submit" class="btn">Send Notification</button>
-    </form>
-    <div id="response-message" class="mt-2"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification form</title>
+    <style>
+        .notification-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-<script>
-    document.getElementById('send-notification-form').addEventListener('submit', async function (e) {
-        e.preventDefault(); // Prevent default form submission
+.notification-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
 
-        const message = document.getElementById('notification-message').value;
+.notification-form .btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        const response = await fetch('send_notification.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ message: message }),
+.notification-form .btn:hover {
+    background-color: #45a049;
+}
+
+#response-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="notification-form">
+        <h2>Send Notification</h2>
+        <form id="send-notification-form">
+            <textarea id="notification-message" rows="4" placeholder="Enter your notification message here..." required></textarea>
+            <button type="submit" class="btn">Send Notification</button>
+        </form>
+        <div id="response-message" class="mt-2"></div>
+    </div>
+    
+    <script>
+        document.getElementById('send-notification-form').addEventListener('submit', async function (e) {
+            e.preventDefault(); // Prevent default form submission
+    
+            const message = document.getElementById('notification-message').value;
+    
+            const response = await fetch('send_notification.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: message }),
+            });
+    
+            const result = await response.json();
+            document.getElementById('response-message').innerText = result.message;
+            
+            // Clear the textarea after sending
+            document.getElementById('notification-message').value = '';
         });
-
-        const result = await response.json();
-        document.getElementById('response-message').innerText = result.message;
-        
-        // Clear the textarea after sending
-        document.getElementById('notification-message').value = '';
-    });
-</script>
+    </script>
+    
+</body>
+</html>
