@@ -211,7 +211,7 @@ session_start();
 <script>
 // Fetch notifications and update the display
 async function fetchNotifications() {
-    const response = await fetch('fetch_notifications.php');
+    const response = await fetch('notifications/fetch_notifications.php');
     const data = await response.json();
     
     const { notifications, unreadCount, readCount } = data;
