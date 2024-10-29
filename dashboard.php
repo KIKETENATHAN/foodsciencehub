@@ -206,17 +206,22 @@ session_start();
         }
     }
 </script>
+
+<!--js for notification start-->
 <script>
-// Function to fetch notifications
+// Fetch notifications and update the display
 async function fetchNotifications() {
     const response = await fetch('fetch_notifications.php');
-    const notifications = await response.json();
+    const data = await response.json();
+    
+    const { notifications, unreadCount, readCount } = data;
 
-    const unreadCount = notifications.filter(n => n.is_read == 0).length;
+    // Update the unread count badge
     document.getElementById('notification-count').innerText = unreadCount;
 
+    // Populate notifications list
     const notificationsList = document.getElementById('notifications-list');
-    notificationsList.innerHTML = '';
+    notificationsList.innerHTML = ''; // Clear old notifications
 
     notifications.forEach(notification => {
         const card = document.createElement('div');
@@ -226,15 +231,26 @@ async function fetchNotifications() {
     });
 }
 
-// Show/hide the notification popup
-document.getElementById('notification-bell').addEventListener('click', (event) => {
+// Mark notifications as read
+async function markNotificationsAsRead() {
+    await fetch('mark_notifications_read.php', { method: 'POST' });
+    document.getElementById('notification-count').innerText = '0';  // Reset badge to 0
+}
+
+// Show/hide the notification popup and mark notifications as read
+document.getElementById('notification-bell').addEventListener('click', async (event) => {
     event.preventDefault();
     const popup = document.getElementById('notification-popup');
     popup.classList.toggle('hidden');
-    fetchNotifications();
+
+    if (!popup.classList.contains('hidden')) {
+        await fetchNotifications();
+        await markNotificationsAsRead();
+    }
 });
 
 // Initial fetch on page load
 fetchNotifications();
 </script>
+<!--js for notification start-->
 </html>

@@ -1,0 +1,30 @@
+<div class="notification-form">
+    <h2>Send Notification</h2>
+    <form id="send-notification-form">
+        <textarea id="notification-message" rows="4" placeholder="Enter your notification message here..." required></textarea>
+        <button type="submit" class="btn">Send Notification</button>
+    </form>
+    <div id="response-message" class="mt-2"></div>
+</div>
+
+<script>
+    document.getElementById('send-notification-form').addEventListener('submit', async function (e) {
+        e.preventDefault(); // Prevent default form submission
+
+        const message = document.getElementById('notification-message').value;
+
+        const response = await fetch('send_notification.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: message }),
+        });
+
+        const result = await response.json();
+        document.getElementById('response-message').innerText = result.message;
+        
+        // Clear the textarea after sending
+        document.getElementById('notification-message').value = '';
+    });
+</script>
