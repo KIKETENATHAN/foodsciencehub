@@ -73,7 +73,7 @@ if (!$user) {
     <!-- Dashboard Layout -->
     <div class="flex">
         <!-- Sidebar -->
-        <aside class="w-64 bg-green-800 min-h-screen text-white p-6">
+        <aside class="w-64 bg-green-500 min-h-screen text-white p-6">
             <div class="mb-8">
             </div>
             <nav class="space-y-4 fixed top-0 left-10">

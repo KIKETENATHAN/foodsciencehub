@@ -95,11 +95,6 @@
                 </div>
             </div>
             <a href="#" class="bg-white text-green-700 py-2 px-4 rounded-lg no-underline hover:bg-green-200 hover:text-white">Jobs</a>
-            <input type="text" id="searchInput" placeholder="Search..."
-                class="px-2 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-green-300" aria-label="Search">
-            <button id="searchButton" class="ml-2 p-2 bg-green-600 text-white rounded-md hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-300 flex items-center justify-center" aria-label="Search Button">
-                <i class="bi bi-search text-blue-600 bg-white p-1 rounded-full"></i>
-            </button>
         </div>
     </div>
 </nav>
