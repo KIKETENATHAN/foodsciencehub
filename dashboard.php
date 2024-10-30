@@ -49,6 +49,32 @@ session_start();
         .main-expanded {
             margin-left: 0;
         }
+        .footer-navigation {
+        display: flex;
+        justify-content: space-around;
+        padding: 8px; /* Ensure background fits content */
+        background-color: #e0f7e4; /* Custom green background */
+        }
+
+    .footer-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 6px;
+        background-color: white;
+        color: #2f855a; /* Match color to a green shade */
+        }
+
+        .footer-item span {
+            display: block;
+        }
+
+.footer-navigation {
+    width: fit-content;
+    margin: 0 auto; /* Center footer */
+    border-radius: 12px;
+}
     </style>
 </head>
 <body class="bg-gray-100">
@@ -79,7 +105,7 @@ session_start();
                     <a href="#" id="notification-bell" class="flex items-center space-x-2">
                     <i class="fas fa-bell"></i>
                     <span class="text-green-500">Notifications</span>
-                    <span id="notification-count" class="absolute top-0 right-0 mt-1 -mr-3 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                    <span id="notification-count" class="absolute top-0 right-0 mt-1 -mr-3 bg-green-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
                     </a>
                     <div id="notification-popup" class="hidden absolute top-10 right-0 bg-white shadow-lg rounded-lg w-64 p-4">
                         <div id="notifications-list"></div>
@@ -145,24 +171,25 @@ session_start();
     </div>
 
     <!-- Footer Navigation for Mobile View -->
-    <div class="fixed bottom-0 left-0 right-0 bg-green-100 text-white flex justify-around py-2 z-50">
-        <a href="#" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-            <span class="text-lg"><i class="fas fa-home"></i></span>
-            <span class="text-sm">Home</span>
-        </a>
-        <a href="#" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-            <span class="text-lg"><i class="fas fa-book"></i></span>
-            <span class="text-sm">Discover</span>
-        </a>
-        <a href="profile.php" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-            <span class="text-lg"><i class="fas fa-user"></i></span>
-            <span class="text-sm">Profile</span>
-        </a>
-        <a href="logout.php" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
-            <span class="text-lg"><i class="fas fa-sign-out-alt"></i></span>
-            <span class="text-sm">Log out</span>
-        </a>
-    </div>
+<div class="footer-navigation fixed inset-x-0 bottom-0 bg-green-100 text-white flex justify-around py-2 z-50">
+    <a href="#" class="footer-item flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
+        <span class="text-lg"><i class="fas fa-home"></i></span>
+        <span class="text-sm">Home</span>
+    </a>
+    <a href="#" class="footer-item flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
+        <span class="text-lg"><i class="fas fa-book"></i></span>
+        <span class="text-sm">Discover</span>
+    </a>
+    <a href="profile.php" class="footer-item flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
+        <span class="text-lg"><i class="fas fa-user"></i></span>
+        <span class="text-sm">Profile</span>
+    </a>
+    <a href="logout.php" class="footer-item flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
+        <span class="text-lg"><i class="fas fa-sign-out-alt"></i></span>
+        <span class="text-sm">Log out</span>
+    </a>
+</div>
+
 </body>
 <script>
     function toggleSidebar() {
