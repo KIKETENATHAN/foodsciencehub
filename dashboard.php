@@ -55,9 +55,9 @@ session_start();
 
     <!-- Sidebar -->
     <div class="flex flex-col md:flex-row">
-    <aside id="sidebar" class="w-64 bg-green-300 h-screen text-white p-6 fixed top-0 left-0">
+    <aside id="sidebar" class="w-64 bg-green-100 h-screen text-white p-6 fixed top-0 left-0">
             <div class="mb-8">
-                <h1 class="text-2xl font-bold"><u>FoodScienceHub</u></h1>
+                <h1 class="text-2xl font-bold "><u style="color:green">FoodScienceHub</u></h1>
             </div>
 
             <!-- Toggle Arrow -->
@@ -108,7 +108,7 @@ session_start();
                 </nav>
 
             <div class="mt-auto pt-6">
-                <p class="text-sm text-center">Made with ❤️ by Celertech Labs &copy;2024</p>
+                <p class="text-sm text-center" style="color:green">Made with ❤️ by Celertech Labs &copy;2024</p>
             </div>
         </aside>
 
@@ -145,7 +145,7 @@ session_start();
     </div>
 
     <!-- Footer Navigation for Mobile View -->
-    <div class="fixed bottom-0 left-0 right-0 bg-green-500 text-white flex justify-around py-2 z-50">
+    <div class="fixed bottom-0 left-0 right-0 bg-green-100 text-white flex justify-around py-2 z-50">
         <a href="#" class="flex flex-col items-center py-2 px-4 rounded-lg bg-white text-green-800 no-underline">
             <span class="text-lg"><i class="fas fa-home"></i></span>
             <span class="text-sm">Home</span>

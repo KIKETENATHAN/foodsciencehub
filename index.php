@@ -54,11 +54,8 @@
             transform: translateX(0%);
         }
     }
-    .highlight {
-    background-color: yellow; /* You can change this to any color you prefer */
-    }
-
-    </style>
+    
+</style>
 </head>
 <div class="bg-green-50">
 <!-- Navigation Bar -->
@@ -79,7 +76,7 @@
         <!-- Knowledge Base Button -->
         <a href="#" id="knowledgeBaseButton" class="bg-white text-green-700 py-2 px-4 rounded-lg no-underline hover:bg-green-500 hover:text-white">Knowledge Base</a>
                 <!-- Floating Card for Knowledge Base Links -->
-                <div id="knowledgeBaseLinks" class="hidden absolute top-16 right-0 bg-green-600 rounded-lg shadow-lg w-64 z-50">
+                <div id="knowledgeBaseLinks" class="hidden absolute top-10 right-0 bg-green-600 rounded-lg shadow-lg w-64 z-50">
                     <div class="p-4 space-y-2">
                         <a href="#link1" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Fruits and Vegetables</a>
                         <a href="#link2" class="block bg-white text-green-500 font-bold no-underline py-2 px-4 rounded-lg shadow hover:bg-gray-100">Dairy, Meat Tech</a>
